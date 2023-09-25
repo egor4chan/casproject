@@ -1,0 +1,584 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    background-color: #17181F;
+    font-family: 'Commissioner', sans-serif;
+}
+
+* {
+    list-style: none;
+}
+
+header {
+    background-color: #17181F;
+
+    height: 70px;
+    width: 100%;
+
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    
+    padding-left: 85px;
+
+    color: white;
+}
+
+div.panel {
+    top: 0px;
+    left: 0px;
+    background-color: #1c1d24;
+    position: fixed;
+
+    height: 100%;
+    width: 60px;
+}
+
+header > a {
+    color: rgb(181, 181, 181);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 2px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.14s;
+}
+
+header > a:hover {
+    color: white;
+    background-color: #1c1d24;
+}
+
+header > button#auth {
+
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgb(17, 213, 197), rgb(64, 229, 241));
+    padding: 12px 25px;
+
+    font-weight: 600;
+    color: rgb(19, 37, 41);
+
+    box-shadow: 0px 0px 10px rgb(31, 111, 117);
+
+    transition: 0.2s;
+
+    position: absolute;
+
+    right: 300px;
+}
+
+header > button#auth:hover {
+    box-shadow: 0px 0px 20px rgb(37, 126, 132);
+    color: black;
+}
+
+header > button.small-box {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-color: #353538;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: #1c1d24;
+
+    position: absolute;
+    right: 100px;
+}
+
+header > button.small-box#second {
+    right: 145px;
+}
+
+div.content {
+    position: relative;
+    top: 70px;
+    text-align: center;
+    width: 700px;
+    
+}
+
+header > p#balance {
+    font-weight: 600;
+    user-select: none;
+
+    position: absolute;
+    right: 420px;
+    text-align: left;
+    color: white;
+
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #444444;
+    border-radius: 10px;
+    
+    padding: 10px 25px;
+
+    transition: 0.2s;
+
+    top: 0.4px;
+    
+}
+
+
+
+
+div.game-place {
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+
+    margin-left: 450px;
+
+
+    width: 1100px;
+    height: 500px;;
+}
+
+div.bet-panel {
+    height: 550px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #1c1d24;
+}
+
+div.mines-panel {
+    margin-left: 10px;
+    height: 550px;
+    width: 790px;
+    border-radius: 10px;
+    background-color: #1c1d24;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+div.bet-panel > p {
+    user-select: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+    color: rgb(217, 213, 213);
+    font-size: 12px;
+}
+
+div.bet-panel > input {
+    width: 80%;
+    padding: 0px 10px;
+    border: 0.2px solid;
+    outline: none;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 17px;
+    border-color: rgb(69, 69, 67);
+    background-color: #1e1f26;
+
+    color: rgb(217, 213, 213);
+}
+
+div.bet-panel > button#play {
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 40px;
+    width: 87%;
+    height: 40px;
+    border-radius: 6px;
+    font-weight: 600;
+
+    border: 2px solid;
+    border-color: rgb(17, 213, 197);
+
+    background: linear-gradient(45deg, rgb(17, 213, 197), rgb(0, 238, 255));
+}
+
+div.bet-panel > button#play:hover {
+    box-shadow: 0px 0px 10px rgb(39, 112, 112);
+    color: rgb(43, 43, 43);
+}
+
+div.bet-panel > a {
+    top: 270px;
+    position: relative;
+    font-size: 14px;
+    cursor: pointer;
+    color: rgb(156, 152, 152);
+    padding: 10px;
+    border-radius: 5px;
+
+    transition: 0.2s;
+}
+
+div.bet-panel > a:hover {
+    background-color: #222329;
+    color: white;
+}
+
+div.place { 
+    position: relative;
+
+    height: 380px;
+    width: 380px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+    display: flex;
+    text-align: left;
+    
+}
+
+div.place > div {
+    background-color: aqua;
+    width: 70px;
+    height: 70px;
+    margin: 3px;
+    border-radius: 5px;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+div.place > div:hover {
+    background-color: rgb(4, 223, 223);
+}
+
+div.mines-panel > div.counts {
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid;
+    border-color: rgb(54, 54, 53);
+    background-color: #1e1f26;
+    width: 70px;
+    height: 100px;
+    border-radius: 6px;
+
+    position: absolute;
+
+    top: 160px;
+}
+
+div#good {
+    left: 320px;
+}
+
+div#bad {
+    right: 10px;
+}
+
+header > img {
+    opacity: 0.7;
+    height: 70px;;
+}
+
+div.notification {
+    position: absolute;
+    bottom: 20px;
+
+    padding: 10px 30px;
+    background-color: #343960;
+    
+    width: 220px;
+    color: rgb(181, 181, 181);
+
+    background-color: #1c1d24;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #353538;
+
+    user-select: none;
+
+    left: 70px;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+div.bonus-place > div {
+    width: 356px;
+    margin-right: 10px;
+}
+
+div.profile {
+    
+}
+
+div.profile > center > div.profile-photo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    border-color: #353538;
+
+    position: relative;
+    top: 40px;
+}
+
+div.profile > center > p#fullname {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;   
+
+    position: relative;
+    top: 60px;
+
+    user-select: none;
+
+    background-color: #17181F;
+    background-image: linear-gradient(75deg, rgb(105, 242, 231), rgb(47, 211, 178));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.profile > center > p#id {
+    padding: 5px;
+    background-color: #1e1f26;
+    border: 1px solid;
+    border-color: #353538;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    color:rgb(139, 139, 139);
+
+    position: relative;
+    top: 55px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+div.profile > center > p#id:hover {
+    color: rgb(179, 179, 179);
+    background-color: #222329;
+}
+
+div.profile > center > button {
+    font-family: 'Commissioner', sans-serif;
+    width: 90%;
+    border-radius: 10px;
+
+    height: 50px;
+    border: 1px solid;
+    border-color: #353538;
+    background-color:#222329;
+    font-size: 16px;
+    color:rgb(139, 139, 139);
+
+    position: relative;
+    top: 230px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+div.profile > center > button:hover {
+    background-color: #1e1f26;
+}
+
+div.counters {
+    text-align: center;
+    display: flex;
+
+    position: relative;
+    top: 45px;
+}
+
+div.counters > p#count {
+    
+}
+
+hr {
+    background-color:rgb(75, 74, 81);
+    color: #1c1d24;
+    height: 1px;
+    border: none;
+    width: 80%;
+    border-radius: 1px;
+
+    position: relative;
+    top: 60px;
+}
+
+div.bet-panel.second {
+    box-shadow: 0px 0px 10px rgb(32, 101, 101);
+    background: linear-gradient(30deg, rgb(36, 188, 193), rgb(104, 219, 219), rgb(73, 235, 247));
+}
+
+div.counters {
+    position: relative;
+    
+    align-items: center;
+    padding: 0px 38px;
+    width: 90%;
+    height: 25px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color:rgb(156, 152, 152);
+
+    top: 70px;
+
+    user-select: none;
+}
+
+div.counters > p {
+    text-align: right;
+}
+
+div.bet-panel.second > h1 {
+    position: relative;
+    top: 10px;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(30, 134, 138);
+    user-select: none;
+}
+
+div.bet-panel.second > button#get-bonus {
+    font-family: 'Commissioner', sans-serif;
+    width: 90%;
+    border-radius: 10px;
+
+    height: 50px;
+    border: none;
+    
+    background-color: white;
+    font-size: 16px;
+    color:rgb(40, 175, 175);
+
+    position: relative;
+    top: 403px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+div.bet-panel.second > button#get-bonus:hover {
+    box-shadow: 0px 0px 10px white;
+    color: rgb(37, 209, 209);
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    color:#646464;
+    font-size: 12px;
+    user-select: none;
+    left: 46.6vw;
+}
+
+div.coefs {
+    
+    width: 95%;
+    height: 50px;
+    
+    position: relative;
+    top: 45px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.coefs > a {
+    display: flex;
+    padding: 10px 19px;
+    background-color: #222329;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+    margin-right: 5px;
+    font-weight: 600;
+    color:rgb(179, 179, 179);
+    width: 62px;
+    user-select: none;
+    border: 1px solid;
+    border-color: #313131;
+}
+
+div.buttons-bet {
+    width: 87%;
+    height: 35px;
+
+    position: relative;
+    top: 10px;
+    user-select: none;
+}
+
+div.buttons-bet > button {
+    text-align: center;
+    padding: 8px 2px;
+    border: 1px solid;
+    border-color: #646464;
+    background-color:#222329;
+    border-radius: 5px;
+
+    font-weight: 600;
+    width: 61px;
+
+    color:rgb(181, 181, 181);
+
+    transition: 0.2s;
+}
+
+div.buttons-bet > button:hover {
+    color: white;
+    border-color: #979797;
+    user-select: none;
+    cursor: pointer;
+}
+
+div.roullet-panel {
+    display: flex;
+    align-items: center;
+}
+
+div.roullet {
+    background-color: #343960;
+    width: 800px;
+    height: 150px;
+    overflow: hidden;
+    
+}
+
+div.roullet > ul {
+    display: flex;
+}
+
+div.roullet > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #222329;
+
+    position: relative;
+    top: -16px;
+    left: -40px;
+    border-radius: 10px;;
+    
+}
+
+div.roullet-panel > img {
+    width: 400px;
+    height: 400px;
+    user-select: none;
+}
+
+
+div.window {
+    width: 300px;
+    height: 400px;
+    background-color: #484955;
+}
