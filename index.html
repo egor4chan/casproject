@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="base.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Up</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <a>Режимы</a>
+        <a>Бонусы</a>
+        <a>Партнерам</a>
+        <a>О нас</a>
+        
+        <p id="balance">133₽</p>
+        
+
+        <button id="auth">Кошелек</button>
+        <button class="small-box"></button>
+        <button class="small-box" id="second"></button>
+    </header>
+
+    <div class="content">
+        <div class="game-place">
+            <div class="bet-panel">
+                <p>Сумма ставки</p>
+                <input type="text" value=0 id="bet-count">
+                <p>Количество мин</p>
+                <input type="number" value=2 min=2 max="24" id="mines-count">
+                <button id="play" onclick="createGame()" value="">Играть</button>
+                <br>
+                <a id="info">Как играть?</a>
+            </div>
+            <div class="mines-panel">
+                <center>
+                    <div class="place">
+                        <div id="1"></div><div id="2"></div><div id="3"></div><div id="4"></div><div id="5"></div>
+                        <div id="6"></div><div id="7"></div><div id="8"></div><div id="9"></div><div id="10"></div>
+                        <div id="11"></div><div id="12"></div><div id="13"></div><div id="14"></div><div id="15"></div>
+                        <div id="16"></div><div id="17"></div><div id="18"></div><div id="19"></div><div id="20"></div>
+                        <div id="21"></div><div id="22"></div><div id="23"></div><div id="24"></div><div id="25"></div>
+                    </div>
+                </center>
+                <div class="counts" id="good"></div>
+                <div class="counts" id="bad"></div>
+                <center>
+                    <div class="coefs">
+                        <a>x1.1</a><a>x1.25</a><a>x1.44</a><a>x1.67</a><a>x1.95</a><a>x2.3</a><a>x2.73</a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        
+    </div>
+
+    <div class="notification">
+        Авторизуйтесь, чтобы взаимодействовать с сайтом
+    </div>
+
+<script src="v2.js"></script>
+<script src="mines.js"></script>
+</body>
+</html>
